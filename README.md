@@ -8,6 +8,8 @@
  
 </div>
 
+<br />
+
 Probably the smallest async queue with concurrency support
 
 ## Usage

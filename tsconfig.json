@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src",
+        "baseUrl": ".",
+        "target": "ESNext",
+        "module": "ESNext",
+        "lib": [
+            "ESNext",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedIndexedAccess": true
+    },
+    "include": [
+        "src"
+    ]
+}

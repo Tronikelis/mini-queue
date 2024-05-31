@@ -1,5 +1,5 @@
 {
-    "name": "mini-queue",
+    "name": "pocket-queue",
     "version": "1.0.0",
     "main": "./dist/index.js",
     "scripts": {

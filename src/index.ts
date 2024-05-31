@@ -4,7 +4,7 @@ type Task<T> = {
     failure: (reason: unknown) => void;
 };
 
-export default class AsyncQueue {
+export default class PocketQueue {
     private concurrency = 5;
     private running: Promise<unknown>[] = [];
     private waitlist: Promise<void>[] = [];

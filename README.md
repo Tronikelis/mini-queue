@@ -1,4 +1,4 @@
-# mini-queue
+# pocket-queue
 
 Probably the smallest async queue with concurrency support
 

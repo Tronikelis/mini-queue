@@ -51,6 +51,7 @@ export default class AsyncQueue {
                     try {
                         await promise;
                     } catch {}
+
                     return index;
                 })
             );

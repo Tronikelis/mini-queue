@@ -1,17 +1,26 @@
 {
     "name": "pocket-queue",
     "version": "1.0.0",
-    "main": "./dist/index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+    "main": "./dist/index.cjs",
+    "types": "./dist/index.d.ts",
+    "module": "./dist/index.js",
+    "type": "module",
+    "exports": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.cjs",
+        "default": "./dist/index.cjs"
     },
-    "keywords": [],
-    "author": "Tronikelis",
-    "license": "MIT",
-    "description": "",
+    "files": [
+        "./dist"
+    ],
+    "scripts": {
+        "build": "tsup ./src/index.ts"
+    },
     "devDependencies": {
-        "prettier": "^3.2.5",
-        "prettier-config-tronikelis": "^3.0.0"
+        "prettier": "3.2.5",
+        "prettier-config-tronikelis": "3.0.0",
+        "tsup": "8.0.2",
+        "typescript": "5.4.5"
     },
     "packageManager": "pnpm@8.15.8+sha512.d1a029e1a447ad90bc96cd58b0fad486d2993d531856396f7babf2d83eb1823bb83c5a3d0fc18f675b2d10321d49eb161fece36fe8134aa5823ecd215feed392"
 }

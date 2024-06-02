@@ -15,7 +15,8 @@
     ],
     "scripts": {
         "build": "tsup ./src/index.ts",
-        "test": "vitest"
+        "test": "vitest",
+        "tsc": "tsc --noEmit"
     },
     "repository": {
         "type": "git",

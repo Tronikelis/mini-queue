@@ -1,6 +1,6 @@
 {
     "name": "pocket-queue",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
     "module": "./dist/index.js",
@@ -16,7 +16,8 @@
     "scripts": {
         "build": "tsup ./src/index.ts",
         "test": "vitest",
-        "tsc": "tsc --noEmit"
+        "tsc": "tsc --noEmit",
+        "pbl": "pnpm tsc && pnpm test run && pnpm build && npm publish"
     },
     "repository": {
         "type": "git",

@@ -85,3 +85,29 @@ it("instantly fires new tasks once any task finishes", async () => {
 
     expect(fnFastest).toHaveBeenCalled();
 });
+
+it("rejects correctly", async () => {
+    const q = new PocketQueue();
+
+    const fn = vi.fn(() => q.run(vi.fn().mockRejectedValue(new Error("1"))));
+
+    await expect(fn).rejects.toThrow(new Error("1"));
+});
+
+it("reject does not stop other tasks", async () => {
+    const q = new PocketQueue();
+
+    const fnReject = vi.fn().mockRejectedValue(1);
+    const fn1 = vi.fn().mockResolvedValue(1);
+    const fn2 = vi.fn().mockResolvedValue(2);
+
+    const rejected = vi.fn(() => q.run(fnReject));
+
+    await expect(rejected).rejects.toThrow();
+
+    q.run(fn1);
+    q.run(fn2);
+
+    expect(fn1).toHaveBeenCalled();
+    expect(fn2).toHaveBeenCalled();
+});
